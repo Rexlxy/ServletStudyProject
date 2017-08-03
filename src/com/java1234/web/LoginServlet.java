@@ -32,6 +32,7 @@ public class LoginServlet extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 			String userName = req.getParameter("userName");
 			String password = req.getParameter("password");
+			System.out.println("用户名："+userName+" 密码："+password+" 正尝试登录");
 			Connection con = null;
 			try {
 				con = dbutil.getConnection();
@@ -39,7 +40,7 @@ public class LoginServlet extends HttpServlet{
 				User currentUser = userDao.login(con, user);
 				if(currentUser==null){
 					System.out.println("不是用户");
-					req.setAttribute("error1","Incorrect user name or password11" );
+					req.setAttribute("error","用户名或密码错误" );
 					req.setAttribute("userName", userName);
 					req.setAttribute("password", "");
 					req.getRequestDispatcher("login.jsp").forward(req, resp);

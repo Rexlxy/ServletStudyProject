@@ -27,9 +27,7 @@ public class LoginFilter implements Filter  {
 		HttpSession session = request.getSession();
 		User currentUser = (User) session.getAttribute("currentUser");
 		String path = request.getServletPath();
-		int index = path.indexOf("login");
-		int index2 = path.indexOf("register");
-		if(currentUser==null&&index<0&&index2<0){
+		if(currentUser==null&&(!path.contains("login"))&&(!path.contains("register"))&&(!path.contains(".js"))&&(!path.contains(".css"))){
 			System.out.println("·Ç·¨·ÃÎÊ À¹½Ø");
 			request.getRequestDispatcher("login.jsp").forward(servletRequest, servletResponse);
 		} else {
