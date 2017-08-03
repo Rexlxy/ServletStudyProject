@@ -11,7 +11,7 @@
 		var oldPW = document.getElementById("newPassword").value;
 		var newPW = document.getElementById("repeatPassword").value;
 		if(oldPW!=newPW){
-			window.alert("两次输入的密码不一致")；
+			window.alert("两次输入的密码不一致");
 			changePW.repeatPassword.focus();
 			return false;
 		}
@@ -25,7 +25,6 @@
 <tr>
 <td>你的旧密码：</td>
 <td><input type="password" name="oldPassword" id="oldPassword"></td>
-<td><font color="red">密码错误</font></td>
 </tr>
 <tr>
 <td>你的新密码：</td>
@@ -34,10 +33,9 @@
 <tr>
 <td>请重复新的密码：</td>
 <td><input type="password" name="repeatPassword" id="repeatPassword"></td>
-<td><font color="red">与输入的不符</font></td>
 </tr>
 <tr>
-<td colspan="2"><button type="submit" onclick="return checkPassword">确定</button></td>
+<td colspan="2"><button type="submit" onclick="return checkPassword()">确定</button></td>
 <td colspan="2"><a href="userConfigures.jsp">返回</a></td>
 </tr>
 </table> 

@@ -13,7 +13,6 @@
 <tr>
 <td>你的用户名：</td>
 <td><input type="text"name="newUserName" id="newUserName" ></td>
-<td><font color="red">该用户名已存在</font>
 </tr>
 
 <tr>

@@ -6,6 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
 </head>
+<%
+	request.setCharacterEncoding("utf-8");
+%>
 <body>
 <h1>已登陆</h1>
 <h1>Current user: ${currentUser.userName}</h1><br/>

@@ -9,8 +9,16 @@
 <%
 	String error = (String) request.getAttribute("error1");
 %>
-<body >
+<body background="bgPic.jpg" style="background-repeat:no-repeat">
 <form action="login" method="post">
+<h1 align="center">周楠是美女.COM</h1>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 	<table bgcolor="CCCCFF" align="center" >
 			<tr>
 				<th colspan="2">用户登录</th>
